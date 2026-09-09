@@ -107,6 +107,36 @@ article a:focus {
   background-color: #2e4374;
   text-decoration: underline;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Knoppen naast elkaar */
+.hero-buttons {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.hero-image {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  border-radius: 8px;
+  width: 100%;
+  max-width: 350px; 
+  object-fit: cover;
+}
+
+
+
 footer {
   background-color: #1a2b4c;
   color: #ffffff;
@@ -146,6 +176,13 @@ footer {
     section > p {
         grid-column: 1 / -1;
     }
+    /* img*/
+    .hero-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+  }
 }
 
 /* ===================================================
