@@ -38,16 +38,21 @@ nav a{
     text-decoration: none;
     font-weight: bold;
     padding: 0.6rem 1rem;
-    border-radius: 4px;
-    background-color: #2e4374;
-    display: inline-block;
-    transition: background-color 0.2s ease;
+    background-color: transparent; /* Geen donkere knopachtergrond meer */
+  display: inline-block;
+  border-bottom: 2px solid transparent; /* Onzichtbare rand voorkomt verspringen */
+  transition: color 0.2s ease, border-bottom 0.2s ease;
 }
 nav a:hover,
 nav a:focus {
-  background-color: #4b6cb7;
-  text-decoration: underline;
-  outline: 2px solid #ffffff;
+  color: #00d2b4; 
+  border-bottom: 3px solid #00d2b4;
+  outline: none;
+}
+
+nav a.active {
+  color: #00d2b4;
+  border-bottom: 2px solid #00d2b4;
 }
 
 /* Hoofdinhoud (Main & Sections) */
@@ -122,10 +127,11 @@ img {
 }
 
 .hero-image {
-  margin: 0;
+  margin: 1.5rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .hero-image img {
@@ -135,7 +141,9 @@ img {
   object-fit: cover;
 }
 
+/*test   */
 
+/*test   */
 
 footer {
   background-color: #1a2b4c;
