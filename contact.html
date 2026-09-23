@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactpagina van Ali Malfi, software engineering student.">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/contact.js" defer></script>
+    <title>Contact</title>
+
+</head>
+<body>
+    <header>
+        <h1> <span>A</span>li <span>M</span>alfi</h1>
+        <nav aria-label="Hoofdnavigatie">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="whoami.html">Over mij</a></li>
+                <li><a href="project.html">Projecten</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <section>
+            <h2>Contact</h2>
+            <p>Heb je een vraag of wil je samenwerken? Stuur me een bericht.</p>
+
+            <form id="contact-form" novalidate>
+                <label for="naam">Naam</label>
+                <input id="naam" required minlength="2" aria-describedby="naam-error" aria-invalid="false">
+                <span id="naam-error" role="alert"></span>
+                <label for="email">E-mail</label>
+                <input id="email" type="email" required aria-describedby="email-error" aria-invalid="false">
+                <span id="email-error" role="alert"></span>
+                <label for="bericht">Bericht</label>
+                <textarea id="bericht" required minlength="10" aria-describedby="bericht-error" aria-invalid="false"></textarea>
+                <span id="bericht-error" role="alert"></span>
+                <button type="submit">Versturen</button>
+                <div id="form-status" aria-live="polite"></div>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2026 Ali Malfi</p>
+    </footer>
+    
+</body>
+</html>

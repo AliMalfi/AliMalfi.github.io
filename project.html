@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Overzicht van projecten van Ali Malfi, software engineering student.">
     <link rel="stylesheet" href="/css/style.css">
-    <title>Projects</title>
+    <script src="/js/project.js" defer></script>
+    <title>Projecten</title>
     
 </head>
 <body>
@@ -14,9 +15,10 @@
         <nav aria-label="Hoofdnavigatie">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="whoami.html">Whoami</a></li>
-                <li><a href="project.html" class="active" aria-current="page">Projects</a></li>
+                <li><a href="whoami.html">Over mij</a></li>
+                <li><a href="project.html" class="active" aria-current="page">Projecten</a></li>
                 <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -25,8 +27,17 @@
     <section>
         <h2>Mijn Projecten</h2>
         <p>Een overzicht van projecten waar ik aan heb gewerkt of momenteel aan werk.</p>
+        <label for="sorteer-select">Sorteer op:</label>
+        <select id="sorteer-select">
+            <option value="default">Selecteer</option>
+            <option value="naam">Naam</option>
+            <option value="datum">Datum</option>
+        </select>
 
-        <article>
+<div id="project-lijst"></div>
+        <div id="project-lijst"></div>
+
+        <!-- <article>
             <h3>Smart Environment Dashboard</h3>
             <p>Full-stack webapplicatie die real-time omgevingsdata (lucht, weer, sensoren) 
                ophaalt via externe API's, opslaat in een SQL-database en visualiseert 
@@ -40,7 +51,7 @@
             <p>Een objectgeoriënteerde 2D simulatie van een hotel ontwikkeld in Java met behulp van JSON-layoutconfiguraties. Gasten, personeel en gebeurtenissen worden dynamisch gesimuleerd volgens OOP-principes.</p>
             <p><strong>Technologieën:</strong> Java, OOP, JSON, Git / GitHub</p>
             <a href="https://github.com/hhs-se-semester-2-onderwijs/klas-2-groep-1" target="_blank" rel="noopener noreferrer">Bekijk op GitHub</a>
-        </article>
+        </article> -->
     </section>
 </main>
     <footer>

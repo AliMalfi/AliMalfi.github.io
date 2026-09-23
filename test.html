@@ -1,0 +1,41 @@
+    <!-- <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="js/test.js" defer></script>
+    </head>
+    <body>
+        <h1>Hello, World!</h1>
+        <!-- <p>This is a simple paragraph.</p> -->
+        <!-- <div id="output">This is a div element.</div>
+       
+    </body>
+    </html> --> -->
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/test.js" defer></script>
+        <title>contact</title>
+    </head>
+    <body>
+       <form id="contact-form" novalidate>
+            <label for="naam">Naam</label>
+            <input id="naam" required minlength="2" aria-describedby="naam-error" aria-invalid="false">
+            <span id="naam-error" role="alert"></span>
+            <label for="email">E-mail</label>
+            <input id="email" type="email" required aria-describedby="email-error" aria-invalid="false">
+            <span id="email-error" role="alert"></span>
+            <label for="bericht">Bericht</label>
+            <textarea id="bericht" required minlength="10" aria-describedby="bericht-error" ariainvalid="false"></textarea>
+            <span id="bericht-error" role="alert"></span>
+            <button type="submit">Versturen</button>
+            <div id="form-status" aria-live="polite"></div>
+        </form>
+
+    </body>
+    </html>

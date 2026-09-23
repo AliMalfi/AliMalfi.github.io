@@ -185,7 +185,8 @@ footer {
     }
     /* Zorgt dat gewone tekst en titels over de volle breedte lopen */
     section > h2,
-    section > p {
+    section > p,
+    section > form {
         grid-column: 1 / -1;
     }
     /* img*/
@@ -195,6 +196,32 @@ footer {
     align-items: center;
     gap: 2rem;
   }
+  /*project lijst js */
+   #project-lijst {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        grid-column: 1 / -1; /* laat de container zelf de volle breedte pakken */
+    }
+    /* maak het formulier zelf iets breder dan mobiel, maar niet de volle breedte */
+    #contact-form {
+        max-width: 500px;
+    }
+}
+
+/* overmijn lijst */
+dt {
+    font-weight: bold;
+    color: #1a2b4c;        /* Dezelfde blauwe kleur als je header en h2 */
+    margin-top: 0.8rem;    /* Geeft ademruimte tussen de onderwerpen */
+}
+
+dt:first-of-type {
+    margin-top: 0;        /* Voorkomt onnodige witruimte boven de eerste term */
+}
+
+dd {
+    margin-left: 0;        /* Verwijdert de standaard browserinspringing */
 }
 
 /* ===================================================
@@ -210,4 +237,45 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
+}
+
+/* Contactformulier */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form label {
+    font-weight: bold;
+    color: #1a2b4c;
+    margin-top: 1rem;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 0.6rem;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+#contact-form input[aria-invalid="true"],
+#contact-form textarea[aria-invalid="true"] {
+    border-color: #c0392b;
+}
+
+#contact-form span[role="alert"] {
+    color: #c0392b;
+    font-size: 0.85rem;
+}
+
+#contact-form button {
+    background-color: #1a2b4c;
+    color: #ffffff;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+    align-self: flex-start;
+    cursor: pointer;
 }
