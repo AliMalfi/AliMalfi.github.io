@@ -39,6 +39,7 @@ function maakProjectKaart(project) {
 
     const link = document.createElement("a");
     link.href = project.githubUrl;
+    //verzorg dat je link in ander tab opent
     link.target = "_blank";
     link.rel = "noopener noreferrer";
     link.textContent = "Bekijk op GitHub";
@@ -66,14 +67,14 @@ function renderProjecten(projectenLijst) {
 //De functie laten draaien zodra de pagina geladen is
 document.addEventListener("DOMContentLoaded", () => {
     renderProjecten(projecten);
-
+    //event listener voor de select dropdown sorteren
     const sorteerSelect = document.getElementById("sorteer-select");
     sorteerSelect.addEventListener("change", verwerkSorteerKeuze);
 });
 
 //drop down menu sorteer functie
 function sorteerOpNaam(lijst) {
-    //spread operator
+    //spread operator- kopie van de lijst maken zodat ik niet de originele lijst sorteer
     return[...lijst].sort((a, b) => a.titel.localeCompare(b.titel));
 }
 
@@ -83,6 +84,7 @@ function sorteerOpDatum(lijst) {
 } 
 //event listener voor de select dropdown filteren
 function verwerkSorteerKeuze(event) {
+    //hier haal ik de waarde van de select dropdown op
     const gekozenOptie = event.target.value;
     let gesorteerdeLijst;
 
