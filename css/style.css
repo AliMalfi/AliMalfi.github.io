@@ -31,6 +31,16 @@ header h1{
 header h1 span {
     color: #ffc107;
 }
+header h1 a {
+    color: inherit;         /* Neemt de witte kleur over van de header */
+    text-decoration: none;  /* Verwijdert de standaard onderstreping */
+    display: inline-block;
+}
+
+header h1 a:hover,
+header h1 a:focus {
+    opacity: 0.85;          /* Subtiele feedback wanneer je er met de muis op staat */
+}
 nav ul{
     list-style:none;
     display: flex;
